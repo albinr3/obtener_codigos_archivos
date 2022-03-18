@@ -1,4 +1,4 @@
-import xlrd, os
+import xlrd, os, xlwt
 
 
 dirs = os.listdir()
@@ -28,3 +28,18 @@ for elem in lista_final_sinvacios:
         lista_final_sinletras.append(float(elem))
          
 print(lista_final_sinletras)
+
+##################################################################################
+
+def extractDigits(lst): 
+    return [[el] for el in lst]
+
+lista_final_convertida_a_listas = extractDigits(lista_final_sinletras)
+workbook = xlwt.Workbook()
+sheet = workbook.add_sheet("hoja1")
+
+
+for i in range(0,len(lista_final_convertida_a_listas)):
+    for j in range(0,1):
+        sheet.write(i, j, lista_final_convertida_a_listas[i][j])
+workbook.save("prueba.xls")
