@@ -1,10 +1,11 @@
 import xlrd, os
 
-contador = 0
+
 dirs = os.listdir()
 lista = []
 lista_final_sinvacios = []
 lista_final_sinletras = []
+
 def es_numero(n):
     try:
         float(n)
@@ -26,4 +27,4 @@ for elem in lista_final_sinvacios:
     if es_numero(elem):
         lista_final_sinletras.append(float(elem))
          
-print(len(lista_final_sinletras))
+print(lista_final_sinletras)
