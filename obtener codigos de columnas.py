@@ -27,7 +27,7 @@ for elem in lista_final_sinvacios:
     if es_numero(elem):
         lista_final_sinletras.append(float(elem))
          
-print(lista_final_sinletras)
+
 
 ##################################################################################
 
