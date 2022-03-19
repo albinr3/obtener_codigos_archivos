@@ -21,7 +21,12 @@ for file in dirs:
         a = sheet1.col_values(3)
         lista.extend(a)
 
-lista_final_sinvacios = [string for string in lista if string !=""]  
+
+#elimino valores vacios
+lista_final_sinvacios = [string for string in lista if string !=""]
+
+#elimino valores duplicados
+lista_final_sinvacios = set(lista_final_sinvacios)  
 
 for elem in lista_final_sinvacios:
     if es_numero(elem):
